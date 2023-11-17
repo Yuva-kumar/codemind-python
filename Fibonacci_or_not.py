@@ -1,11 +1,15 @@
 def fib(n):
-    lst=[0,1]
-    for i in range(2,n):
-        pre=lst[i-1]+lst[i-2]
-        lst.append(pre)
-    return lst
+    l=[0,1]
+    for i in range(n):
+        l.append(l[-1]+l[-2])
+    return l
 n=int(input())
-if n in fib(n):
-    print("True")
+a=fib(n)
+if n in a:
+    print('True')
 else:
-    print("False")
+    print('False')
+
+
+        
+    
