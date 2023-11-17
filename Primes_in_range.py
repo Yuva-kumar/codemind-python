@@ -1,18 +1,15 @@
-import math
 def prime(n):
-    a=int(math.sqrt(n))
-    if n==1:
+    a=int(n**0.5)
+    if n<2:
         return False
     for i in range(2,a+1):
-        if n%i ==0:
+        if n%i==0:
             return False
     return True
 a=int(input())
 b=int(input())
-l=[]
+c=0
 for i in range(a,b+1):
-    if prime(i)==True:
-        l.append(i)
-print(len(l))
-        
-    
+    if prime(i):
+        c+=1
+print(c)
