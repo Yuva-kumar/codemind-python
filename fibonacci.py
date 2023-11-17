@@ -1,9 +1,8 @@
 def fib(n):
-    lst=[0,1]
-    for i in range(2,n):
-        pre=lst[i-1]+lst[i-2]
-        lst.append(pre)
-    return lst
+    l=[0,1]
+    for i in range(n-2):
+        l.append(l[-1]+l[-2])
+    return l
 n=int(input())
-lst=fib(n)
-print(*lst)
+a=fib(n)
+print(*a)
